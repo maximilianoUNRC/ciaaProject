@@ -89,7 +89,7 @@
 void initMyVariables(void)
 {
    tiltLed = EDU_CIAA_NXP_LED3_VERDE;
-   pos_current = 0;
+   pos_current = 0; 
    tiltFrec = 100;
    tiltCounter = 0;
 
@@ -167,7 +167,7 @@ void procesarTeclas(uint8_t teclas)
    {
      // tiltLed = EDU_CIAA_NXP_LED3_VERDE;
       if (FRECMIN < tiltFrec){
-                    	  	 tiltFrec -= 100;
+        tiltFrec -= 100;
       }else{
     	  int aux = EDU_CIAA_NXP_RGB_BLANCO;
     	  ciaaPOSIX_write(fd_out, &aux, 1);
